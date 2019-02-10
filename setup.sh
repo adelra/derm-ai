@@ -15,10 +15,10 @@ echo "START-------------------------------------------------" >> $FILE
 echo "" >> $FILE
 
 # retrieve the web page using curl. time the process with the time command.
-time (curl --connect-timeout 1000 $TRAIN_IMG_URL) >> $FILE 2>
-time (curl --connect-timeout 1000 $TRAIN_EMB_URL) >> $FILE 2>
-time (curl --connect-timeout 1000 $TEST_IMG_URL) >> $FILE 2>
-time (curl --connect-timeout 1000 $TEST_EMB_URL) >> $FILE 2>
+wget --connect-timeout 1000 $TRAIN_IMG_URL >> $FILE 2>
+wget --connect-timeout 1000 $TRAIN_EMB_URL >> $FILE 2>
+wget --connect-timeout 1000 $TEST_IMG_URL >> $FILE 2>
+wget --connect-timeout 1000 $TEST_EMB_URL >> $FILE 2>
 
 # write additional footer information to the log file
 echo "" >> $FILE
